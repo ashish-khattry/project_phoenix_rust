@@ -8,10 +8,10 @@ fn self_test(input:String)
 }
 fn main()->Result<(), Box<dyn std::error::Error>>
 {
-    println!("Enter input [YES / NO]");
+    println!("Enter input");
     let mut input=String::new();
     std::io::stdin().read_line(&mut input)?;
     let input=input.trim().to_string();
-    self_test(input);
+    self_test(input);     
     Ok(())
 }
