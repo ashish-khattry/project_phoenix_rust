@@ -1,28 +1,24 @@
-//04_nested_error_kind
-fn main()
-{// this program has to fix later 
-    let file=match std::fs::File::open("secret.txt")
-    {
-        Ok(file)=>file,
-        Err(file_error)=> match file_error.kind()
-        {
-            Ok(NotFound)=>
-            {
-                std::fs::create("secret.txt")
-                {
-                    Ok(file)=>file,
-                    Err(_)=>
-                    {
-                        println!("File creation failed!");
-                        return;
-                    }
+use std::fs::File;
+use std::io::ErrorKind;
+
+fn main() {// has to be fixed later 
+    let _file = match File::open("secret.txt") {
+        Ok(file) => file,
+        Err(file_error) => match file_error.kind() {
+         
+            ErrorKind::NotFound => match File::create("secret.txt") {
+                File::create
+                Ok(fc) => fc,
+                Err(e) => {
+                    println!("File creation failed: {:?}", e);
+                    panic!("Crashing program!");
                 }
+            },
+          
+            other_error => {
+                println!("Other error: {:?}", other_error);
+                panic!("Crashing program!");
             }
-            Err(_)=>
-            {
-                println!("Other error");
-                return;
-            }
-        };
-    }
+        },
+    };
 }
