@@ -8,7 +8,7 @@ fn self_test(input:String)
 }
 fn main()->Result<(), Box<dyn std::error::Error>>
 {
-    println!("Enter input");
+    println!("Enter some input ");
     let mut input=String::new();
     std::io::stdin().read_line(&mut input)?;
     let input=input.trim().to_string();
