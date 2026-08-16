@@ -53,7 +53,7 @@ fn calculate(c:Calculator)->f64
 }
 fn main()
 {
-    println!("\n               [ {} ]","🚀 Welcome To CLI Calculator 🧮 For Simple Calculation.".green().bold());
+    println!("\n               [ {} ]","🚀 Welcome To CLI Calculator 🧮 ".green().bold());
     println!("\n                              [ {} ]","Enter 1️⃣  Number".green().bold());
     let mut a=String::new();
     io::stdin().read_line(&mut a).unwrap();
