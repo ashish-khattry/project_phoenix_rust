@@ -3,7 +3,7 @@ use std::io::{Write};
 use std::io;
 fn main()
 {
-    print!("Enter you name :");
+    print!("Please enter you name :");
     io::stdout().flush().expect("Flushing error!");
     let mut name=String::new();
     io::stdin().read_line(&mut name).expect("Input error!");
