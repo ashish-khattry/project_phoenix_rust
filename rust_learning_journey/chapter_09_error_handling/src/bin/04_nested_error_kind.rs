@@ -1,3 +1,4 @@
+
 use std::fs::File;
 use std::io::ErrorKind;
 
@@ -6,7 +7,7 @@ fn main() {
         Ok(file) => file,
         Err(file_error) => match file_error.kind() {
    
-            ErrorKind::NotFound => match File::create("secret.txt") { // match कीवर्ड और File::create
+            ErrorKind::NotFound => match File::create("secret.txt") { 
                 Ok(fc) => fc,
                 Err(e) => {
                     println!("File creation failed: {:?}", e);
