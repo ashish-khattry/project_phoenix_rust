@@ -1,12 +1,12 @@
 //10_bulletproof_struct
-public struct Age{ value:i32 }
+pub struct Age{ value:i32 }
 impl Age
 {
-    fn new(&self)->i32
+    fn new(value:i32)->i32
     {
-        if self.value>0 && self.value<150
+        if value>0 && value<150
         {
-            self.age
+            value
         }
         else
         {
