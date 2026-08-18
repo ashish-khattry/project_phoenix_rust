@@ -1,5 +1,4 @@
 //06_cto_expect_message
-//05_the_unwrap_shortcut
 fn main()
 {
     let dirty_num_string="xyz";
