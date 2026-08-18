@@ -1,12 +1,13 @@
 //10_bulletproof_struct
+#[derive(Debug)]
 pub struct Age{ value:i32 }
 impl Age
 {
-    fn new(value:i32)->i32
+    fn new(value:i32)->Age
     {
         if value>0 && value<150
         {
-            value
+            Age{ value }
         }
         else
         {
@@ -17,5 +18,5 @@ impl Age
 fn main()
 {
     let my_age=Age::new(25);
-    println!("My age is ={}",my_age);
+    println!("My age is ={:?}",my_age);
 }
