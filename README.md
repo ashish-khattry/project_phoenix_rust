@@ -10,7 +10,7 @@ Every line of code in this repository is brutally reviewed, memory-safe (zero pa
 
 ## 🏗️ The Architecture Roadmap
 
-This root repository (`project_phoenix_rust`) is divided into distinct engineering phases. Here is the exact internal directory structure:
+This root repository (`deploy`) is divided into distinct engineering phases. Here is the exact internal directory structure:
 
 ### 🟢 PHASE 01: Rust Foundation & CLI Tools
 **Directory:** `phase_01_rust_foundation_and_cli_tools`
